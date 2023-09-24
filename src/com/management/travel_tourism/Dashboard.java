@@ -107,7 +107,7 @@ public class Dashboard
         b7_vk_pkg.setFont(new Font("Tahoma",Font.PLAIN,20));
         b7_vk_pkg.setBackground(new Color(5,96,234));
         b7_vk_pkg.setForeground(Color.white);
-        b7_vk_pkg.addActionListener(e->{});
+        b7_vk_pkg.addActionListener(e->{new CheckPackage();});
         p2.add(b7_vk_pkg);
 
         JButton b8_vw_htl = new JButton("View Hotels");
