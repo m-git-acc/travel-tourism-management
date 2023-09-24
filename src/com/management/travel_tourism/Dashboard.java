@@ -20,7 +20,7 @@ public class Dashboard
         p1.setBounds(0,0,1600,65);
         frame.add(p1);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/dashboard.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/dashboard.png"));
         Image i2 = i1.getImage().getScaledInstance(60,60, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel top_icon = new JLabel(i3);
@@ -182,7 +182,7 @@ public class Dashboard
         b15_abt.addActionListener(e->{new About();});
         p2.add(b15_abt);
 
-        ImageIcon i6 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/home.jpg"));
+        ImageIcon i6 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/home.jpg"));
         Image i7 = i6.getImage().getScaledInstance(1650,1000,Image.SCALE_DEFAULT);
         ImageIcon i8 = new ImageIcon(i7);
         JLabel i9 = new JLabel(i8);
@@ -197,9 +197,5 @@ public class Dashboard
 
 
         frame.setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        new Dashboard("rohit123","Rohit Sharma");
     }
 }

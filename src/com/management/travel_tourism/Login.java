@@ -31,7 +31,7 @@ public class Login
         p1.setBounds(0,0,400,400);
         frame.add(p1);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/login.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/login.png"));
         Image i2 = i1.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l1 = new JLabel(i3);
@@ -124,7 +124,7 @@ public class Login
     {
         try(
                 Connection dc = Database_Connection.getConnection();
-                PreparedStatement ps = dc.prepareStatement("select name from travel_tourism_signup where user=? and pass=?");
+                PreparedStatement ps = dc.prepareStatement("select name from signup where user=? and pass=?");
             )
         {
             ps.setString(1, user);
@@ -150,6 +150,4 @@ public class Login
         }
         catch (Exception e) {e.printStackTrace();}
     }
-
-    public static void main(String[] args) {new Login();}
 }

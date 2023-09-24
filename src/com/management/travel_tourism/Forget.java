@@ -130,7 +130,7 @@ public class Forget
         p2.setBackground(Color.white);
         p2.setBounds(520,20,380,360);
         frame.add(p2);
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/forgotpassword.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/forgotpassword.jpg"));
         Image i2 = i1.getImage().getScaledInstance(300,300,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l1 = new JLabel(i3);
@@ -143,7 +143,7 @@ public class Forget
     {
         try(
                 Connection dc = Database_Connection.getConnection();
-                PreparedStatement ps = dc.prepareStatement("Select name,sec_ques from travel_tourism_signup WHERE user=?");
+                PreparedStatement ps = dc.prepareStatement("Select name,sec_ques from signup WHERE user=?");
             )
         {
             ps.setString(1,user);
@@ -164,7 +164,7 @@ public class Forget
     {
         try(
                 Connection con = Database_Connection.getConnection();
-                PreparedStatement ps = con.prepareStatement("select ans from travel_tourism_signup WHERE user=?");
+                PreparedStatement ps = con.prepareStatement("select ans from signup WHERE user=?");
             )
         {
             ps.setString(1,user);
@@ -196,7 +196,7 @@ public class Forget
     {
         try(
                 Connection dc = Database_Connection.getConnection();
-                PreparedStatement ps = dc.prepareStatement("select pass from travel_tourism_signup WHERE user=?");
+                PreparedStatement ps = dc.prepareStatement("select pass from signup WHERE user=?");
                 )
         {
             ps.setString(1,user);
@@ -208,9 +208,5 @@ public class Forget
             catch (Exception e) {e.printStackTrace();}
         }
         catch (Exception e) {e.printStackTrace();}
-    }
-
-    public static void main(String[] args) {
-        new Forget();
     }
 }

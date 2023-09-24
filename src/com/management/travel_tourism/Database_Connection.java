@@ -9,8 +9,11 @@ public class Database_Connection
     public static Connection getConnection()
     {
         try{
+            //calling the driver to use DATABASE
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql:///core_projects","root","mohit123");
+
+            //inserting the local database details.
+            con = DriverManager.getConnection("jdbc:mysql:///travel_tourism_j2se","root","mohit123");
         }
 
         catch (Exception e) {e.printStackTrace();}
