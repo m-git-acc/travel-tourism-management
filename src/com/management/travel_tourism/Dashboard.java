@@ -9,6 +9,7 @@ public class Dashboard
     JFrame frame;
     Dashboard(String user, String name)
     {
+        System.out.println(user);
         frame = new JFrame();
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setLayout(null);
@@ -99,7 +100,7 @@ public class Dashboard
         b6_bk_pkg.setFont(new Font("Tahoma",Font.PLAIN,20));
         b6_bk_pkg.setBackground(new Color(5,96,234));
         b6_bk_pkg.setForeground(Color.white);
-        b6_bk_pkg.addActionListener(e->{});
+        b6_bk_pkg.addActionListener(e->{new BookPackage(user);});
         p2.add(b6_bk_pkg);
 
         JButton b7_vk_pkg = new JButton("View Package");
