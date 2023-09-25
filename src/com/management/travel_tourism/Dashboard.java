@@ -140,7 +140,7 @@ public class Dashboard
         b11_dest.setFont(new Font("Tahoma",Font.PLAIN,20));
         b11_dest.setBackground(new Color(5,96,234));
         b11_dest.setForeground(Color.white);
-        b11_dest.addActionListener(e->{});
+        b11_dest.addActionListener(e->{new Destination();});
         p2.add(b11_dest);
 
         JButton b12_pay= new JButton("Payment");
