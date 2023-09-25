@@ -49,6 +49,5 @@ public class Payment
 
         frame.getContentPane().setBackground(Color.WHITE);
         frame.setVisible(true);
-
     }
 }

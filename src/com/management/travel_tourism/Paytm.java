@@ -11,14 +11,13 @@ public class Paytm extends JFrame
         j.setEditable(false);
 
         try {
-            j.setPage("https://paytm.com");
+            j.setPage("https://www.paytm.com");
         }catch (Exception e) {
             j.setContentType("text/html");
             j.setText("<html>Could not load</html>");
         }
 
         JScrollPane scrollPane = new JScrollPane(j);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().add(scrollPane);
         setPreferredSize(new Dimension(800,600));
 

@@ -62,7 +62,7 @@ public class BookHotel
         c1.setBounds(271, 110, 150, 30);
         frame.add(c1);
 
-        JLabel la3 = new JLabel("Total Persons");
+        JLabel la3 = new JLabel("Total Rooms");
         la3.setBounds(35, 150, 200, 14);
         frame.add(la3);
 
