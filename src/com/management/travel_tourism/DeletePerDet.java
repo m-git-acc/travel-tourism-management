@@ -205,6 +205,12 @@ public class DeletePerDet
                         ps2.executeUpdate();
                     }
                     catch (Exception e) {e.printStackTrace();}
+                    try(PreparedStatement ps2 = con.prepareStatement("DELETE FROM bookhotel WHERE username=?");)
+                    {
+                        ps2.setString(1,user);
+                        ps2.executeUpdate();
+                    }
+                    catch (Exception e) {e.printStackTrace();}
 //                ==================================================================================================
 
                     JOptionPane.showMessageDialog(null, "Your Account is deleted successfully....");

@@ -124,7 +124,7 @@ public class Dashboard
         b9_bk_htl.setFont(new Font("Tahoma",Font.PLAIN,20));
         b9_bk_htl.setBackground(new Color(5,96,234));
         b9_bk_htl.setForeground(Color.white);
-        b9_bk_htl.addActionListener(e->{});
+        b9_bk_htl.addActionListener(e->{new BookHotel(user);});
         p2.add(b9_bk_htl);
 
         JButton b10_vbh = new JButton("View Booked Hotel");
