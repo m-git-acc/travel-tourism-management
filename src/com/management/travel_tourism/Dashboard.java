@@ -116,7 +116,7 @@ public class Dashboard
         b8_vw_htl.setFont(new Font("Tahoma",Font.PLAIN,20));
         b8_vw_htl.setBackground(new Color(5,96,234));
         b8_vw_htl.setForeground(Color.white);
-        b8_vw_htl.addActionListener(e->{});
+        b8_vw_htl.addActionListener(e->{new CheckHotels().setVisible(true);});
         p2.add(b8_vw_htl);
 
         JButton b9_bk_htl = new JButton("Book Hotel");
