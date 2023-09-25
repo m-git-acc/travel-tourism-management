@@ -148,7 +148,7 @@ public class Dashboard
         b12_pay.setFont(new Font("Tahoma",Font.PLAIN,20));
         b12_pay.setBackground(new Color(5,96,234));
         b12_pay.setForeground(Color.white);
-        b12_pay.addActionListener(e->{});
+        b12_pay.addActionListener(e->{new Payment();});
         p2.add(b12_pay);
 
         JButton b13_cal = new JButton("Calculator");
