@@ -9,6 +9,7 @@ public class Dashboard
     JFrame frame;
     Dashboard(String user, String name)
     {
+        System.out.println(user);
         frame = new JFrame();
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setLayout(null);
@@ -20,7 +21,7 @@ public class Dashboard
         p1.setBounds(0,0,1600,65);
         frame.add(p1);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/dashboard.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/dashboard.png"));
         Image i2 = i1.getImage().getScaledInstance(60,60, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel top_icon = new JLabel(i3);
@@ -99,7 +100,7 @@ public class Dashboard
         b6_bk_pkg.setFont(new Font("Tahoma",Font.PLAIN,20));
         b6_bk_pkg.setBackground(new Color(5,96,234));
         b6_bk_pkg.setForeground(Color.white);
-        b6_bk_pkg.addActionListener(e->{});
+        b6_bk_pkg.addActionListener(e->{new BookPackage(user);});
         p2.add(b6_bk_pkg);
 
         JButton b7_vk_pkg = new JButton("View Package");
@@ -107,7 +108,7 @@ public class Dashboard
         b7_vk_pkg.setFont(new Font("Tahoma",Font.PLAIN,20));
         b7_vk_pkg.setBackground(new Color(5,96,234));
         b7_vk_pkg.setForeground(Color.white);
-        b7_vk_pkg.addActionListener(e->{});
+        b7_vk_pkg.addActionListener(e->{new CheckPackage();});
         p2.add(b7_vk_pkg);
 
         JButton b8_vw_htl = new JButton("View Hotels");
@@ -182,7 +183,7 @@ public class Dashboard
         b15_abt.addActionListener(e->{new About();});
         p2.add(b15_abt);
 
-        ImageIcon i6 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/home.jpg"));
+        ImageIcon i6 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/home.jpg"));
         Image i7 = i6.getImage().getScaledInstance(1650,1000,Image.SCALE_DEFAULT);
         ImageIcon i8 = new ImageIcon(i7);
         JLabel i9 = new JLabel(i8);
@@ -197,9 +198,5 @@ public class Dashboard
 
 
         frame.setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        new Dashboard("rohit123","Rohit Sharma");
     }
 }

@@ -138,7 +138,7 @@ public class DeletePerDet
         frame.add(b_back);
         b_back.addActionListener(e -> {frame.setVisible(false);});
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/delete.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/delete.png"));
         Image i2 = i1.getImage().getScaledInstance(260,470,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l4 = new JLabel(i3);
@@ -148,7 +148,7 @@ public class DeletePerDet
         boolean b = true;
         try(
                 Connection con = Database_Connection.getConnection();
-                PreparedStatement ps = con.prepareStatement("SELECT * FROM travel_tourism_customer WHERE username=?")
+                PreparedStatement ps = con.prepareStatement("SELECT * FROM customer WHERE username=?")
             )
         {
             ps.setString(1,user);
@@ -185,7 +185,7 @@ public class DeletePerDet
         {
             try(
                     Connection con = Database_Connection.getConnection();
-                    PreparedStatement ps = con.prepareStatement("DELETE FROM travel_tourism_customer WHERE username=?");
+                    PreparedStatement ps = con.prepareStatement("DELETE FROM customer WHERE username=?");
                 )
             {
                 ps.setString(1,user);

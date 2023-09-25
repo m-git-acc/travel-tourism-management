@@ -120,7 +120,7 @@ public class SignUp
         p2.setBounds(500,0,400,370);
         p2.setLayout(null);
         frame.add(p2);
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/signup.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/signup.png"));
         Image i2 = i1.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l1 = new JLabel(i3);
@@ -135,7 +135,7 @@ public class SignUp
         try
             (
                     Connection dc = Database_Connection.getConnection();
-                    PreparedStatement ps = dc.prepareStatement("insert into travel_tourism_signup(user,name,pass,sec_ques,ans) values(?,?,?,?,?)");
+                    PreparedStatement ps = dc.prepareStatement("insert into signup(user,name,pass,sec_ques,ans) values(?,?,?,?,?)");
             )
         {
             ps.setString(1,user);

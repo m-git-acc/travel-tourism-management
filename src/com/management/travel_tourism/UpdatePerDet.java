@@ -133,7 +133,7 @@ public class UpdatePerDet
         frame.add(b_back);
         b_back.addActionListener(e -> {frame.setVisible(false);});
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("managementsystem/Travel_Tourism/icons/update.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/update.png"));
         Image i2 = i1.getImage().getScaledInstance(260,470,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l4 = new JLabel(i3);
@@ -142,7 +142,7 @@ public class UpdatePerDet
 
         try(
                 Connection con = Database_Connection.getConnection();
-                PreparedStatement ps = con.prepareStatement("SELECT * FROM travel_tourism_customer WHERE username=?")
+                PreparedStatement ps = con.prepareStatement("SELECT * FROM customer WHERE username=?")
             )
         {
             ps.setString(1,user);
@@ -188,7 +188,7 @@ public class UpdatePerDet
 
         try(
                 Connection con = Database_Connection.getConnection();
-                PreparedStatement ps = con.prepareStatement("UPDATE travel_tourism_customer SET name=?, id_name=?, id_number=?, gender=?, country=?, address=?, phone=?, mail=? WHERE username=?")
+                PreparedStatement ps = con.prepareStatement("UPDATE customer SET name=?, id_name=?, id_number=?, gender=?, country=?, address=?, phone=?, mail=? WHERE username=?")
             )
         {
 
@@ -214,11 +214,5 @@ public class UpdatePerDet
             }
         }
         catch (Exception e) {e.printStackTrace();}
-    }
-
-
-    public static void main(String[] args)
-    {
-        new UpdatePerDet("rohit123");
     }
 }
