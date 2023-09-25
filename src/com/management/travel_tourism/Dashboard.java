@@ -132,7 +132,7 @@ public class Dashboard
         b10_vbh.setFont(new Font("Tahoma",Font.PLAIN,20));
         b10_vbh.setBackground(new Color(5,96,234));
         b10_vbh.setForeground(Color.white);
-        b10_vbh.addActionListener(e->{});
+        b10_vbh.addActionListener(e->{new ViewBookedHotel(user);});
         p2.add(b10_vbh);
 
         JButton b11_dest= new JButton("Destinations");
