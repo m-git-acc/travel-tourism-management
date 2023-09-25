@@ -92,7 +92,7 @@ public class Dashboard
         b5_ck_pkg.setFont(new Font("Tahoma",Font.PLAIN,20));
         b5_ck_pkg.setBackground(new Color(5,96,234));
         b5_ck_pkg.setForeground(Color.white);
-        b5_ck_pkg.addActionListener(e->{});
+        b5_ck_pkg.addActionListener(e->{new CheckPackage();});
         p2.add(b5_ck_pkg);
 
         JButton b6_bk_pkg= new JButton("Book Package");
@@ -108,7 +108,7 @@ public class Dashboard
         b7_vk_pkg.setFont(new Font("Tahoma",Font.PLAIN,20));
         b7_vk_pkg.setBackground(new Color(5,96,234));
         b7_vk_pkg.setForeground(Color.white);
-        b7_vk_pkg.addActionListener(e->{new CheckPackage();});
+        b7_vk_pkg.addActionListener(e->{new ViewPackage(user);});
         p2.add(b7_vk_pkg);
 
         JButton b8_vw_htl = new JButton("View Hotels");
@@ -116,7 +116,7 @@ public class Dashboard
         b8_vw_htl.setFont(new Font("Tahoma",Font.PLAIN,20));
         b8_vw_htl.setBackground(new Color(5,96,234));
         b8_vw_htl.setForeground(Color.white);
-        b8_vw_htl.addActionListener(e->{});
+        b8_vw_htl.addActionListener(e->{new CheckHotels().setVisible(true);});
         p2.add(b8_vw_htl);
 
         JButton b9_bk_htl = new JButton("Book Hotel");
@@ -124,7 +124,7 @@ public class Dashboard
         b9_bk_htl.setFont(new Font("Tahoma",Font.PLAIN,20));
         b9_bk_htl.setBackground(new Color(5,96,234));
         b9_bk_htl.setForeground(Color.white);
-        b9_bk_htl.addActionListener(e->{});
+        b9_bk_htl.addActionListener(e->{new BookHotel(user);});
         p2.add(b9_bk_htl);
 
         JButton b10_vbh = new JButton("View Booked Hotel");
@@ -132,7 +132,7 @@ public class Dashboard
         b10_vbh.setFont(new Font("Tahoma",Font.PLAIN,20));
         b10_vbh.setBackground(new Color(5,96,234));
         b10_vbh.setForeground(Color.white);
-        b10_vbh.addActionListener(e->{});
+        b10_vbh.addActionListener(e->{new ViewBookedHotel(user);});
         p2.add(b10_vbh);
 
         JButton b11_dest= new JButton("Destinations");
@@ -140,7 +140,7 @@ public class Dashboard
         b11_dest.setFont(new Font("Tahoma",Font.PLAIN,20));
         b11_dest.setBackground(new Color(5,96,234));
         b11_dest.setForeground(Color.white);
-        b11_dest.addActionListener(e->{});
+        b11_dest.addActionListener(e->{new Destination();});
         p2.add(b11_dest);
 
         JButton b12_pay= new JButton("Payment");
@@ -148,7 +148,7 @@ public class Dashboard
         b12_pay.setFont(new Font("Tahoma",Font.PLAIN,20));
         b12_pay.setBackground(new Color(5,96,234));
         b12_pay.setForeground(Color.white);
-        b12_pay.addActionListener(e->{});
+        b12_pay.addActionListener(e->{new Payment();});
         p2.add(b12_pay);
 
         JButton b13_cal = new JButton("Calculator");

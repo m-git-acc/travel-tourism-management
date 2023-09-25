@@ -1,0 +1,10 @@
+Database Name :- "travel_tourism_j2se"
+                 ====================
+total tables :- 5 tables ( signup, customer, hotels, bookhotel, bookpackage)
+-------------------------------------------------------------------------------------
+            ---------####>>>>> table name and & it's details <<<<<####---------
+1. SignUp => user(varchar), name(varchar), pass(varchar), sec_ques(varchar), ans(varchar);
+2. Customer => username(varchar), name(varchar), id_name(varchar), id_number(varchar), gender(varchar), country(varchar), address(varchar), phone(varchar), mail(varchar);
+3. Hotels => name(varchar), cost_per_day(varchar), food_charges(varchar), ac_charges(varchar);
+4. BookHotel => username(varchar), hotel(varchar), rooms(varchar), days(varchar), ac(varchar), food(varchar), id(varchar), number(varchar), phone(varchar), price(varchar);
+5. BookPackage => username(varchar), id_name(varchar), id_number(varchar), phone(varchar), package(varchar), persons(varchar), price(varchar);

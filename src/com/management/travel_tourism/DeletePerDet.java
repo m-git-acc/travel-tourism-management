@@ -183,19 +183,41 @@ public class DeletePerDet
         int x = JOptionPane.showConfirmDialog(null, "Do you want to delete your account?");
         if (x==0)
         {
-            try(
-                    Connection con = Database_Connection.getConnection();
-                    PreparedStatement ps = con.prepareStatement("DELETE FROM customer WHERE username=?");
-                )
+            try
             {
+                Connection con = Database_Connection.getConnection();
+                PreparedStatement ps = con.prepareStatement("DELETE FROM customer WHERE username=?");
+
                 ps.setString(1,user);
                 int n = ps.executeUpdate();
                 if (n>0)
                 {
+//                ====================================================================================================
+                    try(PreparedStatement ps2 = con.prepareStatement("DELETE FROM signup WHERE user=?");)
+                    {
+                        ps2.setString(1,user);
+                        ps2.executeUpdate();
+                    }
+                    catch (Exception e) {e.printStackTrace();}
+                    try(PreparedStatement ps2 = con.prepareStatement("DELETE FROM bookpackage WHERE username=?");)
+                    {
+                        ps2.setString(1,user);
+                        ps2.executeUpdate();
+                    }
+                    catch (Exception e) {e.printStackTrace();}
+                    try(PreparedStatement ps2 = con.prepareStatement("DELETE FROM bookhotel WHERE username=?");)
+                    {
+                        ps2.setString(1,user);
+                        ps2.executeUpdate();
+                    }
+                    catch (Exception e) {e.printStackTrace();}
+//                ==================================================================================================
+
                     JOptionPane.showMessageDialog(null, "Your Account is deleted successfully....");
                     System.exit(0);
                 }
                 else JOptionPane.showMessageDialog(null,"please create your account first..");
+
             }
             catch (Exception e) {e.printStackTrace();}
         }
