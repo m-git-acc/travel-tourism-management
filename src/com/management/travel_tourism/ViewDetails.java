@@ -15,7 +15,8 @@ public class ViewDetails
         frame.setSize(1000,550);
         frame.setLocationRelativeTo(null);
         frame.getContentPane().setBackground(Color.white);
-        frame.setDefaultCloseOperation(3);
+        frame.setResizable(false);
+        frame.setUndecorated(true);
 
         Font l_font = new Font("Raleway",Font.BOLD, 20);
         Font t_font = new Font("Arial",Font.PLAIN,16);

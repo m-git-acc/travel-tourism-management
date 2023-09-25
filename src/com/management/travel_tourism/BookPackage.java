@@ -21,6 +21,8 @@ public class BookPackage
         frame.setBounds(420,220,1100,450);
         frame.setLocationRelativeTo(null);
         frame.setLayout(null);
+        frame.setResizable(false);
+        frame.setUndecorated(true);
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./com/management/travel_tourism/icons/bookpackage.jpg"));
         Image i2 = i1.getImage().getScaledInstance(500,300,Image.SCALE_DEFAULT);

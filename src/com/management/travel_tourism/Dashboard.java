@@ -92,7 +92,7 @@ public class Dashboard
         b5_ck_pkg.setFont(new Font("Tahoma",Font.PLAIN,20));
         b5_ck_pkg.setBackground(new Color(5,96,234));
         b5_ck_pkg.setForeground(Color.white);
-        b5_ck_pkg.addActionListener(e->{});
+        b5_ck_pkg.addActionListener(e->{new CheckPackage();});
         p2.add(b5_ck_pkg);
 
         JButton b6_bk_pkg= new JButton("Book Package");
@@ -108,7 +108,7 @@ public class Dashboard
         b7_vk_pkg.setFont(new Font("Tahoma",Font.PLAIN,20));
         b7_vk_pkg.setBackground(new Color(5,96,234));
         b7_vk_pkg.setForeground(Color.white);
-        b7_vk_pkg.addActionListener(e->{new CheckPackage();});
+        b7_vk_pkg.addActionListener(e->{new ViewPackage(user);});
         p2.add(b7_vk_pkg);
 
         JButton b8_vw_htl = new JButton("View Hotels");
